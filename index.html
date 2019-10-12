@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интерфейс для функций</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<script>
+$('.nav-toggle').on('click', function(){
+  $('#menu').toggleClass('active');
+});
+</script>
+
+<script language="JavaScript" type="text/javascript">	
+	
+	function multi2(){
+		var multi_12, multi_22, multi_32, result;
+		multi_12 = document.getElementById('inp_12').value;
+		    
+		multi_22 = document.getElementById('inp_22').value;
+		multi_22 = parseInt(multi_22);
+		
+		multi_32 = document.getElementById('inp_32').value;
+		multi_32 = parseInt(multi_32);
+		
+    function substr(multi_12, multi_22, multi_32) {
+  multi_12 = multi_12.toString();
+  if (multi_32 < 0) {
+    multi_32 = 1;
+  }
+  if (multi_22 < 0) {
+    multi_22 = 0;
+  }
+  if (multi_32 === 0 || multi_22 > multi_12.length) {
+    return '';
+  }
+  if (multi_22 + multi_32-1 > multi_12.length) {
+    multi_32 = multi_12.length - multi_22;
+  }
+  if (typeof multi_12 === 'string' && typeof multi_22 === 'number' && typeof multi_32 === 'number') {
+    let result = '';
+    for (let i = 0; i < multi_32; i += 1) {
+      result += multi_12[multi_22 + i];
+    }
+    return result;
+  }
+  if (typeof multi_22 === 'string' || typeof multi_32 === 'string') {
+    return "Проверьте входные данные!";
+    }
+  return multi_12;
+} 
+		result = substr(multi_12, multi_22, multi_32);
+		document.getElementById('result_multi2').innerHTML = result;
+	}
+	</script>
+<body>
+<header>
+    <nav class="container">
+	<div class="logo">
+        <h2>Interns / Задание 4 / Жаринова Галина</h2>
+      </div>
+         </nav>
+  </header>
+  <div class="container">
+  <div class="posts-list">
+    <article class="post">
+      <div class="container2">
+	  <h2> Реализация функции substr </h2>
+      <div class="post-content">
+        <p><div class="form-group">
+			 <p><label for="inp_12">Введите строку:</label> </p>
+                          <p> <input type="text" class="form-control" title="Используйте любые символы и регистры" id="inp_12"> </p>
+						  <p><label for="inp_22">Введите начальный индекс:</label></p>
+                          <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_22"> </p>
+						   <p><label for="inp_32">Введите количество символов подстроки:</label> </p>
+                          <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_32"></p>
+                        </div>
+                          <p> <button onclick="multi2()" class="button10">Возвратить подстроку</button></p>
+                    
+                    <hr>
+                    
+                     <p>Рeзультат:   <b><span style="color:#fc6d00" id="result_multi2"></span></b> </p>
+       </div>
+	   </div>
+		</article>
+    </div> 
+  <aside>
+  <div class="widget">
+    <h3 class="widget-title">Список функций</h3>
+    <ul class="widget-category-list">
+      <li><a href="">Является ли строка палиндромом?</a></li>
+      <li><a href="">Реализация функции substr</a></li>
+      <li><a href="">Конвертер ДНК <-> РНК</a></li>
+    </ul>
+  </div>
+  </aside>
+</div> 
+</div>
