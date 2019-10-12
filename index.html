@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <script src="script.js"></script>
-</head>
+
 <script>
 $('.nav-toggle').on('click', function(){
   $('#menu').toggleClass('active');
@@ -18,8 +18,7 @@ $('.nav-toggle').on('click', function(){
 </script>
 
 <script language="JavaScript" type="text/javascript">	
-	
-	function multi2(){
+  function multi2(){
 		var multi_12, multi_22, multi_32, result;
 		multi_12 = document.getElementById('inp_12').value;
 		    
@@ -30,75 +29,74 @@ $('.nav-toggle').on('click', function(){
 		multi_32 = parseInt(multi_32);
 		
     function substr(multi_12, multi_22, multi_32) {
-  multi_12 = multi_12.toString();
-  if (multi_32 < 0) {
-    multi_32 = 1;
-  }
-  if (multi_22 < 0) {
-    multi_22 = 0;
-  }
-  if (multi_32 === 0 || multi_22 > multi_12.length) {
-    return '';
-  }
-  if (multi_22 + multi_32-1 > multi_12.length) {
-    multi_32 = multi_12.length - multi_22;
-  }
-  if (typeof multi_12 === 'string' && typeof multi_22 === 'number' && typeof multi_32 === 'number') {
-    let result = '';
-    for (let i = 0; i < multi_32; i += 1) {
-      result += multi_12[multi_22 + i];
+      multi_12 = multi_12.toString();
+      if (multi_32 < 0) {
+       multi_32 = 1;
+      }
+      if (multi_22 < 0) {
+       multi_22 = 0;
+      }
+      if (multi_32 === 0 || multi_22 > multi_12.length) {
+       return '';
+      }
+      if (multi_22 + multi_32-1 > multi_12.length) {
+       multi_32 = multi_12.length - multi_22;
+      }
+      if (typeof multi_12 === 'string' && typeof multi_22 === 'number' && typeof multi_32 === 'number') {
+       let result = '';
+       for (let i = 0; i < multi_32; i += 1) {
+       result += multi_12[multi_22 + i];
+      }
+      return result;
     }
-    return result;
-  }
-  if (typeof multi_22 === 'string' || typeof multi_32 === 'string') {
-    return "Проверьте входные данные!";
+    if (typeof multi_22 === 'string' || typeof multi_32 === 'string') {
+     return "Проверьте входные данные!";
     }
-  return multi_12;
-} 
-		result = substr(multi_12, multi_22, multi_32);
-		document.getElementById('result_multi2').innerHTML = result;
-	}
-	</script>
+   return multi_12;
+  } 
+	result = substr(multi_12, multi_22, multi_32);
+	document.getElementById('result_multi2').innerHTML = result;
+}
+</script>
+</head>
 <body>
 <header>
-    <nav class="container">
+  <nav class="container">
 	<div class="logo">
-        <h2>Interns / Задание 4 / Жаринова Галина</h2>
-      </div>
-         </nav>
+    <h2>Interns / Задание 4 / Жаринова Галина</h2>
+  </div>
+  </nav>
   </header>
   <div class="container">
-  <div class="posts-list">
-    <article class="post">
-      <div class="container2">
-	  <h2> Реализация функции substr </h2>
-      <div class="post-content">
-        <p><div class="form-group">
-			 <p><label for="inp_12">Введите строку:</label> </p>
-                          <p> <input type="text" class="form-control" title="Используйте любые символы и регистры" id="inp_12"> </p>
+    <div class="posts-list">
+      <article class="post">
+        <div class="container2">
+	        <h2> Реализация функции substr </h2>
+          <div class="post-content">
+              <p><div class="form-group">
+			        <p><label for="inp_12">Введите строку:</label> </p>
+              <p> <input type="text" class="form-control" title="Используйте любые символы и регистры" id="inp_12"> </p>
 						  <p><label for="inp_22">Введите начальный индекс:</label></p>
-                          <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_22"> </p>
-						   <p><label for="inp_32">Введите количество символов подстроки:</label> </p>
-                          <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_32"></p>
-                        </div>
-                          <p> <button onclick="multi2()" class="button10">Возвратить подстроку</button></p>
-                    
-                    <hr>
-                    
-                     <p>Рeзультат:   <b><span style="color:#fc6d00" id="result_multi2"></span></b> </p>
+              <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_22"> </p>
+						  <p><label for="inp_32">Введите количество символов подстроки:</label> </p>
+              <p> <input type="text" class="form-control" title="Используйте любые цифры" id="inp_32"></p>
+           </div>
+           <p> <button onclick="multi2()" class="button10">Возвратить подстроку</button></p>
+           <hr>
+           <p>Рeзультат:<b><span style="color:#fc6d00" id="result_multi2"></span></b></p>
        </div>
 	   </div>
 		</article>
-    </div> 
+   </div> 
   <aside>
-  <div class="widget">
-    <h3 class="widget-title">Список функций</h3>
-    <ul class="widget-category-list">
-     <li><a href="https://gazzzolina.github.io/gazzzolina.palindromesupernew.io/">Является ли строка палиндромом?</a></li>
-      <li><a href="https://gazzzolina.github.io/gazzzolina.substrsupernew.io/">Реализация функции substr</a></li>
-      <li><a href="https://gazzzolina.github.io/gazzzolina.dnaToRnanew.io/">Конвертер ДНК <-> РНК</a></li>
+    <div class="widget">
+      <h3 class="widget-title">Список функций</h3>
+      <ul class="widget-category-list">
+       <li><a href="https://gazzzolina.github.io/gazzzolina.palindromesupernew.io/">Является ли строка палиндромом?</a></li>
+       <li><a href="https://gazzzolina.github.io/gazzzolina.substrsupernew.io/">Реализация функции substr</a></li>
+       <li><a href="https://gazzzolina.github.io/gazzzolina.dnaToRnanew.io/">Конвертер ДНК <-> РНК</a></li>
     </ul>
-  </div>
+   </div>
   </aside>
 </div> 
 </div>
